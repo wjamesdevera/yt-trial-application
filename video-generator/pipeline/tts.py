@@ -27,7 +27,7 @@ def synthesize_scene(scene_index: int, text: str, out_dir: str) -> SceneAudio:
     client = genai.Client(api_key=config.gemini_api_key)
 
     interaction = client.interactions.create(
-        model="gemini-3.1-flash-tts-preview",
+        model=config.tts_model,
         input=f"Say narratingly: {text}!",
         response_format={"type": "audio"},
         generation_config={

@@ -9,8 +9,10 @@ class Config(BaseSettings):
     gemini_api_key: str = ""
     pexel_api_key: str = ""
 
-    # Script Settings
     gemini_model: str = "gemini-3.1-flash-lite"
+    tts_model: str = "gemini-3.1-flash-tts-preview"
+
+    # Script Settings
     num_scenes: int = 6
     seconds_per_scene: int = 5
 
